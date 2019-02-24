@@ -38,4 +38,9 @@ public class GuitarTest {
         assertEquals("wood", guitar.getMaterial());
     }
 
+    @Test
+    public void canCalculateMarkUp(){
+        assertEquals(2250, guitar.calculateMarkUp(), 0.01);
+    }
+
 }

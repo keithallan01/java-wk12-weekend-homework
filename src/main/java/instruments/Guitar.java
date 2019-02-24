@@ -1,8 +1,9 @@
 package instruments;
 
 import interfaces.IPlay;
+import interfaces.ISell;
 
-public class Guitar extends Strings implements IPlay {
+public class Guitar extends Strings implements IPlay, ISell {
 
     private String make;
     private String model;
@@ -28,6 +29,10 @@ public class Guitar extends Strings implements IPlay {
 
     public String play(){
         return "Twang, I'm playing the guitar";
+    }
+
+    public double calculateMarkUp(){
+        return getCostPrice() * 1.5;
     }
 
 }
