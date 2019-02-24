@@ -9,7 +9,7 @@ public class ViolinTest {
 
     @Before
     public void before(){
-        violin = new Violin(4, "Stradivarius", 1845);
+        violin = new Violin("wood", 2000,4, "Stradivarius", 1845);
     }
 
     @Test
@@ -30,5 +30,10 @@ public class ViolinTest {
     @Test
     public void hasYear(){
         assertEquals(1845, violin.getYear());
+    }
+
+    @Test
+    public void canCalculateMarkUp(){
+        assertEquals(4000, violin.calculateMarkUp(), 0.01);
     }
 }

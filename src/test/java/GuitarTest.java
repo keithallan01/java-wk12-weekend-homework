@@ -10,7 +10,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(6,"Gibson", "Les Paul");
+        guitar = new Guitar("wood",1500, 6,"Gibson", "Les Paul", "wood");
     }
 
     @Test
@@ -32,5 +32,10 @@ public class GuitarTest {
         assertEquals("Twang, I'm playing the guitar", guitar.play());
     }
 
+
+    @Test
+    public void hasMaterial(){
+        assertEquals("wood", guitar.getMaterial());
+    }
 
 }
